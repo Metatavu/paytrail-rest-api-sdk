@@ -6,7 +6,7 @@
   <packaging>jar</packaging>
   <name>Paytrail REST API SDK</name>
   <description>Java REST API SDK for Paytrail (http://paytrail.com/)</description>
-  <url>https://github.com/foyt/paytrail-rest-api-sdk-java</url>
+  <url>https://github.com/foyt/paytrail-rest-api-sdk</url>
 
   <organization>
     <name>Foyt</name>
@@ -14,14 +14,14 @@
   </organization>
   
   <scm>
-    <connection>scm:git:git@github.com:foyt/paytrail-rest-api-sdk-java.git</connection>
-    <developerConnection>scm:git:git@github.com:foyt/paytrail-rest-api-sdk-java.git</developerConnection>
-    <url>git@github.com:foyt/paytrail-rest-api-sdk-java.git</url>
+    <connection>scm:git:git@github.com:foyt/paytrail-rest-api-sdk.git</connection>
+    <developerConnection>scm:git:git@github.com:foyt/paytrail-rest-api-sdk.git</developerConnection>
+    <url>git@github.com:foyt/paytrail-rest-api-sdk.git</url>
   </scm>
   
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/foyt/paytrail-rest-api-sdk-java/issues</url>
+    <url>https://github.com/foyt/paytrail-rest-api-sdk/issues</url>
   </issueManagement>
   
   <licenses>
