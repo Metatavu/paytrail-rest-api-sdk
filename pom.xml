@@ -5,6 +5,7 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>Paytrail REST API SDK</name>
+  <description>Java REST API SDK for Paytrail (http://paytrail.com/)</description>
   <url>https://github.com/foyt/paytrail-rest-api-sdk-java</url>
 
   <organization>
@@ -48,6 +49,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <commons-codec.version>1.8</commons-codec.version>
+    <commons-lang3.version>3.1</commons-lang3.version>
   </properties>
   
   <parent>
@@ -65,7 +68,7 @@
         <configuration>
           <source>${maven.compiler.source}</source>
           <target>${maven.compiler.target}</target>
-          <encoding>UTF-8</encoding>
+          <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
       </plugin>
       <plugin>
@@ -97,21 +100,21 @@
       </plugin>
     </plugins>
   </build>
-
+  
   <dependencies>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>3.1</version>
+      <version>${commons-lang3.version}</version>
       <type>jar</type>
       <scope>compile</scope>
     </dependency>
+    
     <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
-      <version>1.8</version>
+      <version>${commons-codec.version}</version>
     </dependency>
   </dependencies>
   
-  <description>Java REST API SDK for Paytrail (http://paytrail.com/)</description>
 </project>
