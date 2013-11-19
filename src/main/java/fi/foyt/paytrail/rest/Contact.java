@@ -46,7 +46,7 @@ public class Contact {
 	/**
 	 * Sets payer's surname. 
 	 * 
-	 * @param firstName payer's surname
+	 * @param lastName payer's surname
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
