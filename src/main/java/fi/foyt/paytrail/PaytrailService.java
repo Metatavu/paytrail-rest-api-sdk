@@ -103,6 +103,27 @@ public class PaytrailService implements Serializable {
 				authCode
 			);
 	}
+
+	/**
+	 * This function can be used to validate parameters returned by failure request.
+	 * Parameters must be validated in order to avoid hacking of payment failure.
+	 
+	 */
+	public boolean confirmFailure(String orderNumber, String timestamp, String authCode) {
+		String base = new StringBuilder()
+  	  .append(orderNumber)
+  	  .append('|')
+  	  .append(timestamp)
+  	  .append('|')
+  	  .append(merchantSecret)
+  	  .toString();
+		
+		return 
+			StringUtils.equals(
+				StringUtils.upperCase(DigestUtils.md5Hex(base)),
+				authCode
+			);
+	}
 	
 	private IOHandlerResult postJsonRequest(String url, String data) throws IOException {
 		return ioHandler.doPost(merchantId, merchantSecret, url, data);
