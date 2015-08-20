@@ -20,7 +20,7 @@ public class PaytrailService implements Serializable {
 
 	private static final long serialVersionUID = 3162475976498158463L;
 
-	private final static String SERVICE_URL = "https://payment.verkkomaksut.fi";
+	private final static String SERVICE_URL = "https://payment.paytrail.com";
 	
 	public PaytrailService(IOHandler ioHandler, Marshaller marshaller, String merchantId, String merchantSecret) {
 		this(ioHandler, marshaller, merchantId, merchantSecret, SERVICE_URL);
