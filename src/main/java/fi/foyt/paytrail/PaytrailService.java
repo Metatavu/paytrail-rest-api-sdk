@@ -20,7 +20,7 @@ public class PaytrailService implements Serializable {
 
 	private static final long serialVersionUID = 3162475976498158463L;
 
-	private final static String SERVICE_URL = "https://payment.verkkomaksut.fi";
+	private final static String SERVICE_URL = "https://payment.paytrail.com";
 	
 	public PaytrailService(IOHandler ioHandler, Marshaller marshaller, String merchantId, String merchantSecret) {
 		this(ioHandler, marshaller, merchantId, merchantSecret, SERVICE_URL);
@@ -93,6 +93,27 @@ public class PaytrailService implements Serializable {
   	  .append(paid)
   	  .append('|')
   	  .append(method)
+  	  .append('|')
+  	  .append(merchantSecret)
+  	  .toString();
+		
+		return 
+			StringUtils.equals(
+				StringUtils.upperCase(DigestUtils.md5Hex(base)),
+				authCode
+			);
+	}
+
+	/**
+	 * This function can be used to validate parameters returned by failure request.
+	 * Parameters must be validated in order to avoid hacking of payment failure.
+	 
+	 */
+	public boolean confirmFailure(String orderNumber, String timestamp, String authCode) {
+		String base = new StringBuilder()
+  	  .append(orderNumber)
+  	  .append('|')
+  	  .append(timestamp)
   	  .append('|')
   	  .append(merchantSecret)
   	  .toString();
