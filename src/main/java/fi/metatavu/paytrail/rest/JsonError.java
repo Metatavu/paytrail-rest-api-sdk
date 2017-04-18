@@ -2,6 +2,9 @@ package fi.metatavu.paytrail.rest;
 
 public class JsonError {
 
+  private String errorMessage;
+  private String errorCode;
+  
 	public String getErrorCode() {
 		return errorCode;
 	}
@@ -18,6 +21,4 @@ public class JsonError {
 		this.errorMessage = errorMessage;
 	}
 	
-	private String errorMessage;
-	private String errorCode;
 }
