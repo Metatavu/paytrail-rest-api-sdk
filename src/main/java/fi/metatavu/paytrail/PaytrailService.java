@@ -20,7 +20,13 @@ public class PaytrailService implements Serializable {
 
 	private static final long serialVersionUID = 3162475976498158463L;
 
-	private final static String SERVICE_URL = "https://payment.paytrail.com";
+	private static final String SERVICE_URL = "https://payment.paytrail.com";
+
+  private transient Marshaller marshaller;
+  private transient IOHandler ioHandler;
+  private String merchantId;
+  private String merchantSecret;
+  private String serviceUrl;
 	
 	public PaytrailService(IOHandler ioHandler, Marshaller marshaller, String merchantId, String merchantSecret) {
 		this(ioHandler, marshaller, merchantId, merchantSecret, SERVICE_URL);
@@ -34,6 +40,7 @@ public class PaytrailService implements Serializable {
 		this.serviceUrl = serviceUrl;
 	}
 	
+	@SuppressWarnings ("squid:S00107")
 	public Payment addProduct(Payment payment, String title, String code, Double amount, Double price, Double vat, Double discount, Integer type) throws PaytrailException {
 		Product product = new Product(title, code, amount, price, vat, discount, type);
 		OrderDetails orderDetails = payment.getOrderDetails();
@@ -72,8 +79,7 @@ public class PaytrailService implements Serializable {
 				throw new PaytrailException(jsonError.getErrorMessage());
 	  	}
 			
-			Result result = marshaller.stringToObject(Result.class, requestResult.getResponse());
-			return result;
+			return marshaller.stringToObject(Result.class, requestResult.getResponse());
 		} catch (IOException e) {
 			throw new PaytrailException(e);
 		}
@@ -128,10 +134,4 @@ public class PaytrailService implements Serializable {
 	private IOHandlerResult postJsonRequest(String url, String data) throws IOException {
 		return ioHandler.doPost(merchantId, merchantSecret, url, data);
 	}
-
-	private Marshaller marshaller;
-	private IOHandler ioHandler;
-	private String merchantId;
-	private String merchantSecret;
-	private String serviceUrl;
 }
