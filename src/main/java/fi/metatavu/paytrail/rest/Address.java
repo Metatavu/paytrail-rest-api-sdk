@@ -1,8 +1,14 @@
 package fi.metatavu.paytrail.rest;
 
 public class Address {
+
+  private String street;
+  private String postalCode;
+  private String postalOffice;
+  private String country;
 	
 	public Address() {
+	  // Zero-argument constructor
 	}
 	
 	public Address(String street, String postalCode, String postalOffice, String country) {
@@ -84,9 +90,4 @@ public class Address {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-
-	private String street;
-	private String postalCode;
-	private String postalOffice;
-	private String country;
 }
