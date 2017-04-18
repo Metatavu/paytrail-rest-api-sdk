@@ -1,18 +1,30 @@
 package fi.metatavu.paytrail.rest;
 
-
 /**
  * http://docs.paytrail.com/en/index-all.html#idp259088
  */
 public class Payment {
+  
+  private String orderNumber;
+  private String referenceNumber;
+  private String description;
+  private String currency;
+  private String locale;
+  private UrlSet urlSet;
+  private OrderDetails orderDetails;
+  private Double price;
+  private String token;
+  private String url;
 	
 	public Payment() {
+	  // Zero-argument constructor
 	}
 	
 	public Payment(String orderNumber, OrderDetails orderDetails, UrlSet urlSet) {
 		this(orderNumber, orderDetails, urlSet, null, null, "EUR", "fi_FI", null, null, null);
 	}
 	
+	@SuppressWarnings ("squid:S00107")
 	public Payment(String orderNumber, OrderDetails orderDetails, UrlSet urlSet, String referenceNumber, 
 			String description, String currency, String locale, Double price, String token, String url) {
 		super();
@@ -187,15 +199,4 @@ public class Payment {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	
-	private String orderNumber;
-	private String referenceNumber;
-	private String description;
-	private String currency;
-	private String locale;
-	private UrlSet urlSet;
-	private OrderDetails orderDetails;
-	private Double price;
-	private String token;
-	private String url;
 }
