@@ -1,4 +1,4 @@
-package fi.foyt.paytrail;
+package fi.metatavu.paytrail;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -7,14 +7,14 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import fi.foyt.paytrail.io.IOHandler;
-import fi.foyt.paytrail.io.IOHandlerResult;
-import fi.foyt.paytrail.json.Marshaller;
-import fi.foyt.paytrail.rest.JsonError;
-import fi.foyt.paytrail.rest.OrderDetails;
-import fi.foyt.paytrail.rest.Payment;
-import fi.foyt.paytrail.rest.Product;
-import fi.foyt.paytrail.rest.Result;
+import fi.metatavu.paytrail.io.IOHandler;
+import fi.metatavu.paytrail.io.IOHandlerResult;
+import fi.metatavu.paytrail.json.Marshaller;
+import fi.metatavu.paytrail.rest.JsonError;
+import fi.metatavu.paytrail.rest.OrderDetails;
+import fi.metatavu.paytrail.rest.Payment;
+import fi.metatavu.paytrail.rest.Product;
+import fi.metatavu.paytrail.rest.Result;
 
 public class PaytrailService implements Serializable {
 

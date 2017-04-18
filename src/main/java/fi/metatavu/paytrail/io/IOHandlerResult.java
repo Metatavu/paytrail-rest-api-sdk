@@ -1,4 +1,4 @@
-package fi.foyt.paytrail.io;
+package fi.metatavu.paytrail.io;
 
 public class IOHandlerResult {
 	

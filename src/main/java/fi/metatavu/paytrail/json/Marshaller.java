@@ -1,4 +1,4 @@
-package fi.foyt.paytrail.json;
+package fi.metatavu.paytrail.json;
 
 import java.io.IOException;
 

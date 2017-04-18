@@ -1,4 +1,4 @@
-package fi.foyt.paytrail;
+package fi.metatavu.paytrail;
 
 public class PaytrailException extends Exception {
 

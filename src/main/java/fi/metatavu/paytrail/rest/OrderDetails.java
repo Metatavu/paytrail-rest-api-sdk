@@ -1,4 +1,4 @@
-package fi.foyt.paytrail.rest;
+package fi.metatavu.paytrail.rest;
 
 
 public class OrderDetails {

@@ -1,4 +1,4 @@
-package fi.foyt.paytrail.rest;
+package fi.metatavu.paytrail.rest;
 
 /**
  * This object is returned when a payment is processed to Paytrail It allows you to query for token or url
