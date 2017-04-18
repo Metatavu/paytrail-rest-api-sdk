@@ -75,7 +75,7 @@ public class Product {
 	}
 	
 	/**
-	 * Returns a price for one product. If the field payment->orderDetails->includeVat = 0, this is a price excluding VAT. If the value is 1, this is a price including VAT. The price can also be negative if you want to add discounts to the service. However, the total amount of the product rows must always be bigger than 0. 
+	 * Returns a price for one product. If the field payment-&gt;orderDetails-&gt;includeVat = 0, this is a price excluding VAT. If the value is 1, this is a price including VAT. The price can also be negative if you want to add discounts to the service. However, the total amount of the product rows must always be bigger than 0. 
 	 * 
 	 * @return price for one product
 	 */
