@@ -1,10 +1,1 @@
 language: java
-
-env:
-  global:
-    - secure: "GxyVYMqcxBzLbyvuPAubh9JnwFC3CTqgLhWFNQ4VkJ/b0Um1SXozkPfh/4jC\n1/QZtGr6VQrdgdb6ffPd0kA0zVV5HzspZMxSNuViO0V8E1ZkGwNmAi9U5Bv6\nLO5P68ba/xt2htSUt8RWP1xjp9UOn+JnD2JknAP9F7kmUcJhTDA="
-    - secure: "BxF1+dFr5OnmBkBPtsgN8MW19EOinpYSUbEOvRl7bbjH0zXIrORrzmoV7j4b\n7UVD702E5V5p2wMeF+ms3S6biWqVGe0lctBfqM4LUjiNDgniBMSezoEDjIQv\nOQKvJePHEzz2xAD+GY9DSCb/8v9glu+IWebElqglKbPD1dniV8w="
-    
-after_success:
-  - python travis/addServer.py
-  - mvn clean deploy --settings ~/.m2/mySettings.xml
