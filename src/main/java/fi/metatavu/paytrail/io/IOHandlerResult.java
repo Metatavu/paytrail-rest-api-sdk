@@ -1,6 +1,9 @@
 package fi.metatavu.paytrail.io;
 
 public class IOHandlerResult {
+  
+  private String response;
+  private int code;
 	
 	public IOHandlerResult(int code, String response) {
 		this.response = response;
@@ -14,7 +17,4 @@ public class IOHandlerResult {
 	public String getResponse() {
 		return response;
 	}
-	
-	private String response;
-	private int code;
 }
