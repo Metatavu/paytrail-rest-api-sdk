@@ -1,8 +1,17 @@
 package fi.metatavu.paytrail.rest;
 
 public class Contact {
+
+  private String firstName;
+  private String lastName;
+  private String companyName;
+  private String email;
+  private String telephone;
+  private String mobile;
+  private Address address;
 	
 	public Contact() {
+    // Zero-argument constructor
 	}
 	
 	public Contact(String firstName, String lastName, String email, Address address, String telephone, String mobile, String companyName) {
@@ -141,12 +150,4 @@ public class Contact {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-
-	private String firstName;
-	private String lastName;
-	private String companyName;
-	private String email;
-	private String telephone;
-	private String mobile;
-	private Address address;
 }
